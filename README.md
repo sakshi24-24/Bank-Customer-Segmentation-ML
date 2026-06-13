@@ -15,13 +15,24 @@ This project transforms raw transactional data into actionable customer segments
 
 ## 📦 Repository Structure
 ```text
-├── bank_transactions.csv          # Raw client data (1M+ Records)
-├── bank_segmentation_pipeline.py  # Production Python script
-├── rfm_scaler.pkl                 # Saved StandardScaler parameters (μ, σ)
-├── rfm_kmeans_model.pkl           # Trained final K-Means model artifact
-├── Customer_Segmentation.pbix     # Interactive Power BI Dashboard
-├── bank_customer_segments.csv     # Final output with Cluster & Segment IDs
-└── README.md                      # Project Documentation
+📁 bank-customer-segmentation-ml/
+│
+├── 📄 README.md                        <-- The matrix table here!
+│
+├── 📁 notebooks/
+│   └── 📓 01_Data_Audit.ipynb          <--  Interactive exploratory notebook
+│
+├── 📁 src/
+│   ├── 🐍 01_data_audit.py             <--  Cleaning script artifact
+│   └── 🐍 bank_segmentation_pipeline.py <--  Production ML pipeline script
+│
+├── 📁 models/
+│   ├── 📦 rfm_scaler.pkl               <-- Serialized StandardScaler constants
+│   └── 📦 rfm_kmeans_model.pkl         <-- Serialized trained KMeans model brain
+│
+└── 📁 dashboard/
+    ├── 📊 Customer_Segmentation.pbix   <-- Interactive Power BI file
+    └── 📄 bank_customer_segments_final.csv <-- Labeled dataset powering the BI visuals
 ```
 ---
 
